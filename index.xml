@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sicerora 的博客</title>
+    <link>https://sicerora.com/</link>
+    <description>Recent content on Sicerora 的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 04 Jan 2019 11:40:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://sicerora.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在 idea 中利用插件统一代码格式</title>
+      <link>https://sicerora.com/post/2019-01-04-%E5%9C%A8-idea-%E4%B8%AD%E5%88%A9%E7%94%A8%E6%8F%92%E4%BB%B6%E7%BB%9F%E4%B8%80%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Fri, 04 Jan 2019 11:40:07 +0800</pubDate>
+      
+      <guid>https://sicerora.com/post/2019-01-04-%E5%9C%A8-idea-%E4%B8%AD%E5%88%A9%E7%94%A8%E6%8F%92%E4%BB%B6%E7%BB%9F%E4%B8%80%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/</guid>
+      <description>&lt;p&gt;统一的代码格式对代码的可读性和多人协作有极大的好处，在 idea 下借助插件可以轻易的做到这一点。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VS 静态编译避免 vcruntime140.dll 缺失问题</title>
+      <link>https://sicerora.com/post/2019-01-02-vs-%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%E9%81%BF%E5%85%8D-vcruntime140.dll-%E7%BC%BA%E5%A4%B1%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 02 Jan 2019 16:43:30 +0800</pubDate>
+      
+      <guid>https://sicerora.com/post/2019-01-02-vs-%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%E9%81%BF%E5%85%8D-vcruntime140.dll-%E7%BC%BA%E5%A4%B1%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;VS 编译 dll 时默认引入动态链接的多线程库（/MD），而动态链接会有外部依赖，如果项目比较简单，为了方便在新环境使用，可以改为使用静态链接的多线程库（/MT）来避免外部依赖。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>https://sicerora.com/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sicerora.com/archives/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
