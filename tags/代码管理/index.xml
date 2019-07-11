@@ -6,10 +6,19 @@
     <description>Recent content in 代码管理 on Sicerora 的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 04 Jan 2019 11:40:07 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 11:43:18 +0800</lastBuildDate>
     
 	<atom:link href="https://sicerora.com/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>语义化版本</title>
+      <link>https://sicerora.com/post/2019-07-11-%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/</link>
+      <pubDate>Thu, 11 Jul 2019 11:43:18 +0800</pubDate>
+      
+      <guid>https://sicerora.com/post/2019-07-11-%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/</guid>
+      <description>&lt;p&gt;参看 &lt;a href=&#34;https://semver.org/lang/zh-CN/&#34;&gt;语义化版本&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>在 idea 中利用插件统一代码格式</title>
