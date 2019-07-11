@@ -6,18 +6,10 @@
     <description>Recent content in Categories on Sicerora 的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Fri, 04 Jan 2019 11:40:07 +0800</lastBuildDate>
     
 	<atom:link href="https://sicerora.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Jni</title>
-      <link>https://sicerora.com/categories/jni/</link>
-      <pubDate>Wed, 02 Jan 2019 16:43:30 +0800</pubDate>
-      
-      <guid>https://sicerora.com/categories/jni/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>代码管理</title>
@@ -25,6 +17,15 @@
       <pubDate>Fri, 04 Jan 2019 11:40:07 +0800</pubDate>
       
       <guid>https://sicerora.com/categories/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jni</title>
+      <link>https://sicerora.com/categories/jni/</link>
+      <pubDate>Wed, 02 Jan 2019 16:43:30 +0800</pubDate>
+      
+      <guid>https://sicerora.com/categories/jni/</guid>
       <description></description>
     </item>
     
