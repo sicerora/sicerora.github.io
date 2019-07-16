@@ -17,7 +17,14 @@
       <pubDate>Thu, 11 Jul 2019 11:43:18 +0800</pubDate>
       
       <guid>https://sicerora.com/post/2019-07-11-%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/</guid>
-      <description>&lt;p&gt;参看 &lt;a href=&#34;https://semver.org/lang/zh-CN/&#34;&gt;语义化版本&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;版本格式：主版本号.次版本号.修订号，版本号递增规则如下：&lt;br /&gt;
+  主版本号：当你做了不兼容的 API 修改，&lt;br /&gt;
+  次版本号：当你做了向下兼容的功能性新增，&lt;br /&gt;
+  修订号：当你做了向下兼容的问题修正。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;引用自 &lt;a href=&#34;https://semver.org/lang/zh-CN/&#34;&gt;语义化版本&lt;/a&gt;，详细参看 &lt;a href=&#34;https://semver.org/lang/zh-CN/&#34;&gt;语义化版本&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

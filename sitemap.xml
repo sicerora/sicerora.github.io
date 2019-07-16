@@ -4,25 +4,42 @@
   
   <url>
     <loc>https://sicerora.com/categories/</loc>
-    <lastmod>2019-07-11T11:43:18+08:00</lastmod>
+    <lastmod>2019-07-16T09:23:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sicerora.com/post/</loc>
-    <lastmod>2019-07-11T11:43:18+08:00</lastmod>
+    <lastmod>2019-07-16T09:23:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sicerora.com/</loc>
-    <lastmod>2019-07-11T11:43:18+08:00</lastmod>
+    <lastmod>2019-07-16T09:23:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sicerora.com/tags/</loc>
-    <lastmod>2019-07-11T11:43:18+08:00</lastmod>
+    <lastmod>2019-07-16T09:23:44+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sicerora.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-07-16T09:23:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sicerora.com/categories/golang/</loc>
+    <lastmod>2019-07-16T09:23:44+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sicerora.com/tags/golang/</loc>
+    <lastmod>2019-07-16T09:23:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
