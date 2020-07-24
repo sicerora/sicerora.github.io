@@ -3,12 +3,12 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.74.3" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>go modules 入门 | Sicerora 的博客</title>
-    <meta property="og:title" content="go modules 入门 - Sicerora 的博客">
+    <title>go modules 入门 | Maurice 的博客</title>
+    <meta property="og:title" content="go modules 入门 - Maurice 的博客">
     <meta property="og:type" content="article">
         
     <meta property="article:published_time" content="2019-07-16T09:23:44&#43;08:00">
@@ -20,7 +20,7 @@
     <meta name="description" content="go modules 入门">
         
     <meta name="author" content="胡梦石">
-    <meta property="og:url" content="https://www.sicerora.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/">
+    <meta property="og:url" content="https://blog.uecostudio.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
@@ -43,17 +43,17 @@
         <div class="col-group">
             <div class="site-name ">
                 
-                    <a id="logo" href="https://www.sicerora.com">
-                        Sicerora 的博客
+                    <a id="logo" href="https://blog.uecostudio.com">
+                        Maurice 的博客
                     </a>
                 
                 <p class="description">唯一不变的，就是变化本身</p>
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="https://www.sicerora.com">首页</a>
+                    <a class="current" href="https://blog.uecostudio.com">首页</a>
                     
-                    <a  href="https://www.sicerora.com/archives/" title="归档">归档</a>
+                    <a  href="https://blog.uecostudio.com/archives/" title="归档">归档</a>
                     
                 </nav>
             </div>
@@ -80,7 +80,7 @@
                         </div>
                         <div class="col-group">
                             <div class="post-meta">
-                                版权声明：本文由 Sicerora 创作，采用 <a
+                                版权声明：本文由 Maurice 创作，采用 <a
                                     href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">CC BY-NC-ND 3.0</a>
                                 协议，转载请署名作者及文章出处。
                             </div>
@@ -95,206 +95,126 @@
                         <div class="post-meta">
                             <span>|</span>
                             
-                            <span class="meta-category"><a href="https://www.sicerora.com/categories/golang">golang</a></span>
+                            <span class="meta-category"><a href="https://blog.uecostudio.com/categories/golang">golang</a></span>
                             
                         </div>
                         
                         
                         <div class="post-content">
                             <p>从 Go 1.11 开始，Go 加入了对版本化模块的初步支持 &ldquo;Go Modules&rdquo;，这对 Golang 应用开发中的工程化有重大意义，而在 2019 年 8 月份计划发布的 Go 1.13 版本中，Go Modules 将被最终确认，这也意味着使用 Go Modules 进行 Golang 应用开发是未来的趋势。在本文中，将使用一个 Hello World 例子来完成 Go Modules 的 Quick Start。</p>
-
 <h2 id="环境准备">环境准备</h2>
-
 <ul>
 <li>升级 Golang 版本 &gt; <code>1.11</code>。</li>
 <li>设置环境变量 <code>GO111MODULE=on</code>。</li>
 </ul>
-
 <h2 id="创建-hello-world-模块">创建 Hello World 模块</h2>
-
 <p>在 <code>$GoPath/src</code> 下创建项目文件夹，路径与使用的 VCS 路径相对应，这里使用 Github 作    为代码版本管理远程仓库。（路径中的 <code>sicirora</code> 更换为你的 Github 用户名 or 组织名 ）</p>
-
-<pre><code class="language-cmd">$ mkdir $GoPath/src/github.com/sicerora/go_module
-</code></pre>
-
-<p>然后进入第一步创建的目录，进行 go module 的初始化。</p>
-
-<pre><code class="language-cmd">$ cd $GoPath/src/github.com/sicerora/go_module
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ mkdir $GoPath/src/github.com/sicerora/go_module
+</code></pre></div><p>然后进入第一步创建的目录，进行 go module 的初始化。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ cd $GoPath/src/github.com/sicerora/go_module
 $ go mod init
-</code></pre>
-
-<p>创建本地 git 仓库。</p>
-
-<pre><code class="language-cmd">$ git init
-$ git commit -am &quot;init&quot;
-</code></pre>
-
-<p>创建 <code>hello.go</code> 文件，写一个函数用于后面的引用，文件内容：</p>
-
-<pre><code class="language-go">package go_module
+</code></pre></div><p>创建本地 git 仓库。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ git init
+$ git commit -am <span style="color:#e6db74">&#34;init&#34;</span>
+</code></pre></div><p>创建 <code>hello.go</code> 文件，写一个函数用于后面的引用，文件内容：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">go_module</span>
    
-import &quot;fmt&quot;
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
    
-func Hello() {
-    fmt.Println(&quot;hello world&quot;)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Hello</span>() {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>)
 }
-</code></pre>
-
-<p>将刚刚的修改提交到本地仓库。</p>
-
-<pre><code class="language-cmd">$ git commit -am &quot;add hello word feature&quot;
-</code></pre>
-
-<p>在 github 上新建一个名为 <code>go_module</code> 的空代码仓库, 不要创建 README.md 等文件。
-<img src="create_github_repository.png" alt="" /></p>
-
+</code></pre></div><p>将刚刚的修改提交到本地仓库。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ git commit -am <span style="color:#e6db74">&#34;add hello word feature&#34;</span>
+</code></pre></div><p>在 github 上新建一个名为 <code>go_module</code> 的空代码仓库, 不要创建 README.md 等文件。
+<img src="create_github_repository.png" alt=""></p>
 <p>将本地仓库推送到 Github。</p>
-
-<pre><code class="language-cmd">$ git remote add origin git@github.com:sicerora/go_module.git
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ git remote add origin git@github.com:sicerora/go_module.git
 $ git push origin --all
-</code></pre>
-
-<h2 id="使用-hello-world-模块">使用 Hello World 模块</h2>
-
+</code></pre></div><h2 id="使用-hello-world-模块">使用 Hello World 模块</h2>
 <p>创建 use_go_module 项目来使用 Hello World 模块。</p>
-
-<pre><code class="language-cmd">$ mkdir $GoPath/src/github.com/sicerora/use_go_module
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ mkdir $GoPath/src/github.com/sicerora/use_go_module
 $ cd $GoPath/src/github.com/sicerora/use_go_module
 $ go mod init
-</code></pre>
+</code></pre></div><p>在 use_go_moudle 里引入 Hello World 模块。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ go get github.com/sicerora/use_go_module
+</code></pre></div><p>创建 main.go 文件，文件内容:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<p>在 use_go_moudle 里引入 Hello World 模块。</p>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;github.com/sicerora/go_module&#34;</span>
 
-<pre><code class="language-cmd">$ go get github.com/sicerora/use_go_module
-</code></pre>
-
-<p>创建 main.go 文件，文件内容:</p>
-
-<pre><code class="language-go">package main
-
-import &quot;github.com/sicerora/go_module&quot;
-
-func main() {
-    go_module.Hello()
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">go_module</span>.<span style="color:#a6e22e">Hello</span>()
 }
-</code></pre>
-
-<p>运行 use_go_module。</p>
-
-<pre><code class="language-cmd">$ go run main.go
-</code></pre>
-
-<p>控制台输出 <code>hello world</code> 就顺利完成了 Hello World 模块的引用。</p>
-
+</code></pre></div><p>运行 use_go_module。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ go run main.go
+</code></pre></div><p>控制台输出 <code>hello world</code> 就顺利完成了 Hello World 模块的引用。</p>
 <h2 id="go-modules-版本号的控制">Go Modules 版本号的控制</h2>
-
 <p>Go Modules 使用 VCS 中的 tag 和 branch 进行版本控制。</p>
-
 <ul>
 <li>通过 tag 控制版本。（推荐）</li>
 <li>通过 branch 控制版本。（一般只在开发时使用）</li>
 </ul>
-
 <p>下面我们为 Hello World 模块添加多个版本，并演示如何在项目中使用指定版本的模块。
 进入 Hello World 模块的代码路径下。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">cd</span> $GoPath/src/github.com/sicerora/go_module
+</code></pre></div><p>更新 <code>hello.go</code> 文件并提交到本地仓库，文件内容：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">go_module</span>
 
-<pre><code class="language-cmd">cd $GoPath/src/github.com/sicerora/go_module
-</code></pre>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
-<p>更新 <code>hello.go</code> 文件并提交到本地仓库，文件内容：</p>
-
-<pre><code class="language-go">package go_module
-
-import &quot;fmt&quot;
-
-func Hello() {
-    fmt.Println(&quot;hello world: v1.0.0&quot;)  // update this line
-}
-</code></pre>
-
-<p>提交到本地仓库并添加标签。</p>
-
-<pre><code class="language-cmd">$ git commit -am &quot;update v1.0.0&quot;
-$ git tag -a v1.0.0 -m &quot;version 1.0.0&quot;
-</code></pre>
-
-<p>再次更新 <code>hello.go</code> 文件并提交到本地仓库，文件内容：</p>
-
-<pre><code class="language-go">package go_module
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Hello</span>() {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world: v1.0.0&#34;</span>)  <span style="color:#75715e">// update this line
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>提交到本地仓库并添加标签。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ git commit -am <span style="color:#e6db74">&#34;update v1.0.0&#34;</span>
+$ git tag -a v1.0.0 -m <span style="color:#e6db74">&#34;version 1.0.0&#34;</span>
+</code></pre></div><p>再次更新 <code>hello.go</code> 文件并提交到本地仓库，文件内容：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">go_module</span>
    
-import &quot;fmt&quot;
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
    
-func Hello() {
-    fmt.Println(&quot;hello world: v1.1.0&quot;)  // update this line
-}
-</code></pre>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Hello</span>() {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world: v1.1.0&#34;</span>)  <span style="color:#75715e">// update this line
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>提交到本地仓库并添加标签。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ git commit -am <span style="color:#e6db74">&#34;update v1.1.0&#34;</span>
+$ git tag -a v1.1.0 -m <span style="color:#e6db74">&#34;version 1.1.0&#34;</span>
+</code></pre></div><p>创建 develop 分支作为一个新的版本。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ git checkout -b develop
+</code></pre></div><p>更新 <code>hello.go</code> 文件，文件内容：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">go_module</span>
 
-<p>提交到本地仓库并添加标签。</p>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
-<pre><code class="language-cmd">$ git commit -am &quot;update v1.1.0&quot;
-$ git tag -a v1.1.0 -m &quot;version 1.1.0&quot;
-</code></pre>
-
-<p>创建 develop 分支作为一个新的版本。</p>
-
-<pre><code class="language-cmd">$ git checkout -b develop
-</code></pre>
-
-<p>更新 <code>hello.go</code> 文件，文件内容：</p>
-
-<pre><code class="language-go">package go_module
-
-import &quot;fmt&quot;
-
-func Hello() {
-    fmt.Println(&quot;hello world: develop&quot;)  // update this line
-}
-</code></pre>
-
-<p>提交到本地仓库</p>
-
-<pre><code class="language-cmd">$ git commit -am &quot;update develop&quot;
-</code></pre>
-
-<p>最后把本地仓库的 commit 和 tag 全部提交到远程仓库</p>
-
-<pre><code class="language-cmd">$ git push origin --all
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Hello</span>() {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world: develop&#34;</span>)  <span style="color:#75715e">// update this line
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>提交到本地仓库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ git commit -am <span style="color:#e6db74">&#34;update develop&#34;</span>
+</code></pre></div><p>最后把本地仓库的 commit 和 tag 全部提交到远程仓库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ git push origin --all
 $ git push origin --tags
-</code></pre>
-
-<h2 id="使用指定版本的-hello-world-模块">使用指定版本的 Hello World 模块</h2>
-
+</code></pre></div><h2 id="使用指定版本的-hello-world-模块">使用指定版本的 Hello World 模块</h2>
 <p>进入到 <code>use_go_module</code> 项目目录下。</p>
-
-<pre><code class="language-cmd">$ cd $GoPath/src/github.com/sicerora/use_go_module
-</code></pre>
-
-<p>修改 <code>go.mod</code> 文件，将 <code>require github.com/sicerora/go_module ....</code> 这一行依次修改为：</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ cd $GoPath/src/github.com/sicerora/use_go_module
+</code></pre></div><p>修改 <code>go.mod</code> 文件，将 <code>require github.com/sicerora/go_module ....</code> 这一行依次修改为：</p>
 <ul>
 <li><code>require github.com/sicerora/go_module v1.0.0</code></li>
 <li><code>require github.com/sicerora/go_module v1.1.0</code></li>
 <li><code>require github.com/sicerora/go_module develop</code></li>
 </ul>
-
 <p>更新依赖并运行 <code>use_go_module</code>。</p>
-
-<pre><code class="language-cmd">$ go get
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">$ go get
 $ go run main.go
-</code></pre>
-
-<p>得到的控制台输出依次为：</p>
-
+</code></pre></div><p>得到的控制台输出依次为：</p>
 <ul>
 <li><code>hello world: v1.0.0</code></li>
 <li><code>hello world: v1.1.0</code></li>
 <li><code>hello world: develop</code></li>
 </ul>
-
 <p>可以看到 Go Modules 帮我们引入的指定版本的模块。</p>
-
 <h2 id="小结">小结</h2>
-
 <p>到这里，关于 Go Modules 的 Quick Start 就做完了。总的来说， Go Modules 使用起来是十分方便的，对于版本的控制也都结合在 VCS 中，不用再做额外的工作。</p>
                         </div>
 
@@ -305,7 +225,7 @@ $ go run main.go
                             
                             <ul class="clearfix">
                                 
-                                <li><a href="https://www.sicerora.com/tags/golang">golang</a></li>
+                                <li><a href="https://blog.uecostudio.com/tags/golang">golang</a></li>
                                 
                             </ul>
                             
@@ -323,7 +243,7 @@ $ go run main.go
         <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
-      <input type="hidden" name="sitesearch" value="https://www.sicerora.com">
+      <input type="hidden" name="sitesearch" value="https://blog.uecostudio.com">
       <button type="submit" class="submit icon-search"></button>
 </form>
     </section>
@@ -333,19 +253,19 @@ $ go run main.go
 <ul class="widget-list">
     
     <li>
-        <a href="https://www.sicerora.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/" title="go modules 入门">go modules 入门</a>
+        <a href="https://blog.uecostudio.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/" title="go modules 入门">go modules 入门</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/post/2019-07-11-%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/" title="语义化版本">语义化版本</a>
+        <a href="https://blog.uecostudio.com/post/2019-07-11-%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/" title="语义化版本">语义化版本</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/post/2019-01-04-%E5%9C%A8-idea-%E4%B8%AD%E5%88%A9%E7%94%A8%E6%8F%92%E4%BB%B6%E7%BB%9F%E4%B8%80%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/" title="在 idea 中利用插件统一代码格式">在 idea 中利用插件统一代码格式</a>
+        <a href="https://blog.uecostudio.com/post/2019-01-04-%E5%9C%A8-idea-%E4%B8%AD%E5%88%A9%E7%94%A8%E6%8F%92%E4%BB%B6%E7%BB%9F%E4%B8%80%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/" title="在 idea 中利用插件统一代码格式">在 idea 中利用插件统一代码格式</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/post/2019-01-02-vs-%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%E9%81%BF%E5%85%8D-vcruntime140.dll-%E7%BC%BA%E5%A4%B1%E9%97%AE%E9%A2%98/" title="VS 静态编译避免 vcruntime140.dll 缺失问题">VS 静态编译避免 vcruntime140.dll 缺失问题</a>
+        <a href="https://blog.uecostudio.com/post/2019-01-02-vs-%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%E9%81%BF%E5%85%8D-vcruntime140.dll-%E7%BC%BA%E5%A4%B1%E9%97%AE%E9%A2%98/" title="VS 静态编译避免 vcruntime140.dll 缺失问题">VS 静态编译避免 vcruntime140.dll 缺失问题</a>
     </li>
     
 </ul>
@@ -373,15 +293,15 @@ $ go run main.go
 <ul class="widget-list">
     
     <li>
-        <a href="https://www.sicerora.com/categories/golang/">golang(1)</a>
+        <a href="https://blog.uecostudio.com/categories/golang/">golang(1)</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/categories/jni/">jni(1)</a>
+        <a href="https://blog.uecostudio.com/categories/jni/">jni(1)</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/categories/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">代码管理(2)</a>
+        <a href="https://blog.uecostudio.com/categories/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">代码管理(2)</a>
     </li>
     
 </ul>
@@ -391,15 +311,15 @@ $ go run main.go
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="https://www.sicerora.com/tags/c&#43;&#43;/">c&#43;&#43;</a>
+    <a href="https://blog.uecostudio.com/tags/c&#43;&#43;/">c&#43;&#43;</a>
     
-    <a href="https://www.sicerora.com/tags/golang/">golang</a>
+    <a href="https://blog.uecostudio.com/tags/golang/">golang</a>
     
-    <a href="https://www.sicerora.com/tags/jni/">jni</a>
+    <a href="https://blog.uecostudio.com/tags/jni/">jni</a>
     
-    <a href="https://www.sicerora.com/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">代码管理</a>
+    <a href="https://blog.uecostudio.com/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">代码管理</a>
     
-    <a href="https://www.sicerora.com/tags/%E6%A0%BC%E5%BC%8F/">格式</a>
+    <a href="https://blog.uecostudio.com/tags/%E6%A0%BC%E5%BC%8F/">格式</a>
     
 </div>
     </section>
@@ -408,7 +328,7 @@ $ go run main.go
 
     <section class="widget">
         <ul class="widget-list">
-            <li><a href="https://www.sicerora.com/index.xml">RSS</a></li>
+            <li><a href="https://blog.uecostudio.com/index.xml">RSS</a></li>
         </ul>
     </section>
 </div>
@@ -417,7 +337,7 @@ $ go run main.go
 </div>
 <footer id="footer">
     <div class="container">
-        &copy; 2019 <a href="https://www.sicerora.com">Sicerora 的博客 By 胡梦石</a>.
+        &copy; 2019 <a href="https://blog.uecostudio.com">Maurice 的博客 By 胡梦石</a>.
     </div>
 </footer>
 

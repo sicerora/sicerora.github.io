@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on Sicerora 的博客</title>
-    <link>https://www.sicerora.com/tags/golang/</link>
-    <description>Recent content in golang on Sicerora 的博客</description>
+    <title>golang on Maurice 的博客</title>
+    <link>https://blog.uecostudio.com/tags/golang/</link>
+    <description>Recent content in golang on Maurice 的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 16 Jul 2019 09:23:44 +0800</lastBuildDate>
     
-	<atom:link href="https://www.sicerora.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.uecostudio.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>go modules 入门</title>
-      <link>https://www.sicerora.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/</link>
+      <link>https://blog.uecostudio.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/</link>
       <pubDate>Tue, 16 Jul 2019 09:23:44 +0800</pubDate>
       
-      <guid>https://www.sicerora.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/</guid>
+      <guid>https://blog.uecostudio.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/</guid>
       <description>&lt;p&gt;从 Go 1.11 开始，Go 加入了对版本化模块的初步支持 &amp;ldquo;Go Modules&amp;rdquo;，这对 Golang 应用开发中的工程化有重大意义，而在 2019 年 8 月份计划发布的 Go 1.13 版本中，Go Modules 将被最终确认，这也意味着使用 Go Modules 进行 Golang 应用开发是未来的趋势。在本文中，将使用一个 Hello World 例子来完成 Go Modules 的 Quick Start。&lt;/p&gt;</description>
     </item>
     

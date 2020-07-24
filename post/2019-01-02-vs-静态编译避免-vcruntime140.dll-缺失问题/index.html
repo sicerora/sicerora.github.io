@@ -3,12 +3,12 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.74.3" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>VS 静态编译避免 vcruntime140.dll 缺失问题 | Sicerora 的博客</title>
-    <meta property="og:title" content="VS 静态编译避免 vcruntime140.dll 缺失问题 - Sicerora 的博客">
+    <title>VS 静态编译避免 vcruntime140.dll 缺失问题 | Maurice 的博客</title>
+    <meta property="og:title" content="VS 静态编译避免 vcruntime140.dll 缺失问题 - Maurice 的博客">
     <meta property="og:type" content="article">
         
     <meta property="article:published_time" content="2019-01-02T16:43:30&#43;08:00">
@@ -20,7 +20,7 @@
     <meta name="description" content="VS 静态编译避免 vcruntime140.dll 缺失问题">
         
     <meta name="author" content="胡梦石">
-    <meta property="og:url" content="https://www.sicerora.com/post/2019-01-02-vs-%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%E9%81%BF%E5%85%8D-vcruntime140.dll-%E7%BC%BA%E5%A4%B1%E9%97%AE%E9%A2%98/">
+    <meta property="og:url" content="https://blog.uecostudio.com/post/2019-01-02-vs-%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%E9%81%BF%E5%85%8D-vcruntime140.dll-%E7%BC%BA%E5%A4%B1%E9%97%AE%E9%A2%98/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
@@ -43,17 +43,17 @@
         <div class="col-group">
             <div class="site-name ">
                 
-                    <a id="logo" href="https://www.sicerora.com">
-                        Sicerora 的博客
+                    <a id="logo" href="https://blog.uecostudio.com">
+                        Maurice 的博客
                     </a>
                 
                 <p class="description">唯一不变的，就是变化本身</p>
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="https://www.sicerora.com">首页</a>
+                    <a class="current" href="https://blog.uecostudio.com">首页</a>
                     
-                    <a  href="https://www.sicerora.com/archives/" title="归档">归档</a>
+                    <a  href="https://blog.uecostudio.com/archives/" title="归档">归档</a>
                     
                 </nav>
             </div>
@@ -80,7 +80,7 @@
                         </div>
                         <div class="col-group">
                             <div class="post-meta">
-                                版权声明：本文由 Sicerora 创作，采用 <a
+                                版权声明：本文由 Maurice 创作，采用 <a
                                     href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">CC BY-NC-ND 3.0</a>
                                 协议，转载请署名作者及文章出处。
                             </div>
@@ -95,23 +95,19 @@
                         <div class="post-meta">
                             <span>|</span>
                             
-                            <span class="meta-category"><a href="https://www.sicerora.com/categories/jni">jni</a></span>
+                            <span class="meta-category"><a href="https://blog.uecostudio.com/categories/jni">jni</a></span>
                             
                         </div>
                         
                         
                         <div class="post-content">
                             <p>VS 编译 dll 时默认引入动态链接的多线程库（/MD），而动态链接会有外部依赖，如果项目比较简单，为了方便在新环境使用，可以改为使用静态链接的多线程库（/MT）来避免外部依赖。</p>
-
 <h2 id="操作步骤">操作步骤</h2>
-
-<p><img src="1.png" alt="" /></p>
-
+<p><img src="1.png" alt=""></p>
 <ol>
 <li>“项目 -&gt; 配置属性 -&gt; C/C++ -&gt; 代码生成” 设置为 “多线程（/MT）”</li>
 <li>编译方式改为 Release</li>
 </ol>
-
 <blockquote>
 <p>PS: Debug 编译方式对应“多线程调试（/MTd）”</p>
 </blockquote>
@@ -124,9 +120,9 @@
                             
                             <ul class="clearfix">
                                 
-                                <li><a href="https://www.sicerora.com/tags/jni">jni</a></li>
+                                <li><a href="https://blog.uecostudio.com/tags/jni">jni</a></li>
                                 
-                                <li><a href="https://www.sicerora.com/tags/c&#43;&#43;">c&#43;&#43;</a></li>
+                                <li><a href="https://blog.uecostudio.com/tags/c&#43;&#43;">c&#43;&#43;</a></li>
                                 
                             </ul>
                             
@@ -144,7 +140,7 @@
         <form id="search" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
-      <input type="hidden" name="sitesearch" value="https://www.sicerora.com">
+      <input type="hidden" name="sitesearch" value="https://blog.uecostudio.com">
       <button type="submit" class="submit icon-search"></button>
 </form>
     </section>
@@ -154,19 +150,19 @@
 <ul class="widget-list">
     
     <li>
-        <a href="https://www.sicerora.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/" title="go modules 入门">go modules 入门</a>
+        <a href="https://blog.uecostudio.com/post/2019-07-16-go-modules-%E5%85%A5%E9%97%A8/" title="go modules 入门">go modules 入门</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/post/2019-07-11-%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/" title="语义化版本">语义化版本</a>
+        <a href="https://blog.uecostudio.com/post/2019-07-11-%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC/" title="语义化版本">语义化版本</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/post/2019-01-04-%E5%9C%A8-idea-%E4%B8%AD%E5%88%A9%E7%94%A8%E6%8F%92%E4%BB%B6%E7%BB%9F%E4%B8%80%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/" title="在 idea 中利用插件统一代码格式">在 idea 中利用插件统一代码格式</a>
+        <a href="https://blog.uecostudio.com/post/2019-01-04-%E5%9C%A8-idea-%E4%B8%AD%E5%88%A9%E7%94%A8%E6%8F%92%E4%BB%B6%E7%BB%9F%E4%B8%80%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F/" title="在 idea 中利用插件统一代码格式">在 idea 中利用插件统一代码格式</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/post/2019-01-02-vs-%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%E9%81%BF%E5%85%8D-vcruntime140.dll-%E7%BC%BA%E5%A4%B1%E9%97%AE%E9%A2%98/" title="VS 静态编译避免 vcruntime140.dll 缺失问题">VS 静态编译避免 vcruntime140.dll 缺失问题</a>
+        <a href="https://blog.uecostudio.com/post/2019-01-02-vs-%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91%E9%81%BF%E5%85%8D-vcruntime140.dll-%E7%BC%BA%E5%A4%B1%E9%97%AE%E9%A2%98/" title="VS 静态编译避免 vcruntime140.dll 缺失问题">VS 静态编译避免 vcruntime140.dll 缺失问题</a>
     </li>
     
 </ul>
@@ -194,15 +190,15 @@
 <ul class="widget-list">
     
     <li>
-        <a href="https://www.sicerora.com/categories/golang/">golang(1)</a>
+        <a href="https://blog.uecostudio.com/categories/golang/">golang(1)</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/categories/jni/">jni(1)</a>
+        <a href="https://blog.uecostudio.com/categories/jni/">jni(1)</a>
     </li>
     
     <li>
-        <a href="https://www.sicerora.com/categories/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">代码管理(2)</a>
+        <a href="https://blog.uecostudio.com/categories/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">代码管理(2)</a>
     </li>
     
 </ul>
@@ -212,15 +208,15 @@
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="https://www.sicerora.com/tags/c&#43;&#43;/">c&#43;&#43;</a>
+    <a href="https://blog.uecostudio.com/tags/c&#43;&#43;/">c&#43;&#43;</a>
     
-    <a href="https://www.sicerora.com/tags/golang/">golang</a>
+    <a href="https://blog.uecostudio.com/tags/golang/">golang</a>
     
-    <a href="https://www.sicerora.com/tags/jni/">jni</a>
+    <a href="https://blog.uecostudio.com/tags/jni/">jni</a>
     
-    <a href="https://www.sicerora.com/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">代码管理</a>
+    <a href="https://blog.uecostudio.com/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">代码管理</a>
     
-    <a href="https://www.sicerora.com/tags/%E6%A0%BC%E5%BC%8F/">格式</a>
+    <a href="https://blog.uecostudio.com/tags/%E6%A0%BC%E5%BC%8F/">格式</a>
     
 </div>
     </section>
@@ -229,7 +225,7 @@
 
     <section class="widget">
         <ul class="widget-list">
-            <li><a href="https://www.sicerora.com/index.xml">RSS</a></li>
+            <li><a href="https://blog.uecostudio.com/index.xml">RSS</a></li>
         </ul>
     </section>
 </div>
@@ -238,7 +234,7 @@
 </div>
 <footer id="footer">
     <div class="container">
-        &copy; 2019 <a href="https://www.sicerora.com">Sicerora 的博客 By 胡梦石</a>.
+        &copy; 2019 <a href="https://blog.uecostudio.com">Maurice 的博客 By 胡梦石</a>.
     </div>
 </footer>
 
